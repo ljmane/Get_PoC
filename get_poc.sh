@@ -20,7 +20,7 @@ while [ $COUNT -ge 0 ] && [ "${ANS,,}" != "y" ]; do
     DESC=$(echo $PAIR | sh | tail -n 1 | cut -d '"' -f 4 | sed -e 's|</b>|-|g' -e 's|<[^>]*>||g')
     echo $REPO
     echo "Description: $DESC"
-    read -p "Clone the above repo? " ANS
+    read -p "Clone the above repo? [y|n] " ANS
     if [ "${ANS,,}" == "yes" ]; then
         ANS=y
     fi
